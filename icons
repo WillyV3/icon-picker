@@ -1,0 +1,36 @@
+#!/bin/bash
+# Nerd Font Icons Browser - bubbletea TUI with selection pane
+
+CACHE_FILE="$HOME/.cache/nerdfonts/icons-list.txt"
+
+# Generate icon cache if needed
+if [ ! -f "$CACHE_FILE" ]; then
+    mkdir -p "$(dirname "$CACHE_FILE")"
+
+    echo "Generating icon cache..."
+    {
+        # Seti-UI + Custom
+        for ((i=0xE5FA; i<=0xE62B; i++)); do printf "\U$(printf '%08x' $i)\n"; done
+        # Devicons
+        for ((i=0xE700; i<=0xE7C5; i++)); do printf "\U$(printf '%08x' $i)\n"; done
+        # Font Awesome
+        for ((i=0xF000; i<=0xF2E0; i++)); do printf "\U$(printf '%08x' $i)\n"; done
+        # Font Awesome Extension
+        for ((i=0xE200; i<=0xE2A9; i++)); do printf "\U$(printf '%08x' $i)\n"; done
+        # Material Design
+        for ((i=0xF500; i<=0xFD46; i++)); do printf "\U$(printf '%08x' $i)\n"; done
+        # Weather
+        for ((i=0xE300; i<=0xE3EB; i++)); do printf "\U$(printf '%08x' $i)\n"; done
+        # Octicons
+        for ((i=0xF400; i<=0xF4A8; i++)); do printf "\U$(printf '%08x' $i)\n"; done
+        # Powerline
+        for ((i=0xE0A0; i<=0xE0A2; i++)); do printf "\U$(printf '%08x' $i)\n"; done
+        for ((i=0xE0B0; i<=0xE0B3; i++)); do printf "\U$(printf '%08x' $i)\n"; done
+        # Codicons
+        for ((i=0xEA60; i<=0xEBEB; i++)); do printf "\U$(printf '%08x' $i)\n"; done
+    } > "$CACHE_FILE"
+    echo "Cache generated!"
+fi
+
+# Launch bubbletea icon picker
+exec icon-picker

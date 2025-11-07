@@ -20,7 +20,9 @@ Navigate with `j`/`k`, select with `space`/`tab`, copy with `enter`.
 ## Installation
 
 ```bash
-go install
+go build -o ~/.local/bin/icon-picker
+cp icons ~/.local/bin/icons
+chmod +x ~/.local/bin/icons
 ```
 
 Requires:
@@ -31,5 +33,5 @@ Requires:
 ## Building
 
 ```bash
-go build -o icon-picker
+go build
 ```
