@@ -77,10 +77,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			var selected []string
 			for i := range m.icons {
 				if m.selected[i] {
-					icon := m.icons[i]
-					runes := []rune(icon)
-					hex := fmt.Sprintf("\\U%08x", runes[0])
-					selected = append(selected, hex)
+					selected = append(selected, m.icons[i])
 				}
 			}
 			if len(selected) > 0 {
