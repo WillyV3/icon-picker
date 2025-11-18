@@ -1,0 +1,13 @@
+pkgbase = icon-picker
+	pkgdesc = Terminal UI for browsing and selecting Nerd Font icons
+	pkgver = 0.0.2
+	pkgrel = 1
+	url = https://github.com/WillyV3/icon-picker
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	depends = wl-clipboard
+	source = icon-picker-0.0.2.tar.gz::https://github.com/WillyV3/icon-picker/archive/v0.0.2.tar.gz
+	sha256sums = SKIP
+
+pkgname = icon-picker
