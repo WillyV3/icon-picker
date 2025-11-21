@@ -1,6 +1,6 @@
 # Maintainer: WillyV3 <your-email@example.com>
 pkgname=icon-picker
-pkgver=0.0.2
+pkgver=0.0.3
 pkgrel=1
 pkgdesc="Terminal UI for browsing and selecting Nerd Font icons"
 arch=('x86_64')
